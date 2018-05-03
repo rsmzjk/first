@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2018-05-02 15:27:10
+ * @version $Id$
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0;vertical-align: middle;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+input,textarea,select{*font-size:100%}
+/*start glass 放大镜开始*/
+.box{
+    width:420px;
+    height:418px;
+    margin-top:100px;
+    margin-left:100px;
+    position:relative;
+}
+.s-img{
+    width:418px;
+    height:418px;
+    border:1px solid #368;
+    overflow:hidden;
+}
+.s-img img{
+    width:100%;
+    height:100%;
+}
+.move{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    width:150px;
+    height:150px;
+    background-image:url('../image/cover.png');
+    cursor: crosshair;
+}
+.b-img{
+    display:none;
+    position:absolute;
+    left:430px;
+    top:0;
+    width:418px;
+    height:418px;
+    border:1px solid #959595;
+    overflow:hidden;
+}
+.b-img img{
+    position:absolute;
+}
+.content{
+    position:relative;
+    width:100%;
+    height:68px;
+    margin-top:8px;
+}
+.content .menu{
+    width: 400px;
+    height: 68px;
+    margin:auto;
+    overflow: hidden;
+}
+.content ul{
+    width: 1000%;
+    height: inherit;
+    transition: margin-left .5s;
+}
+.content li{
+    float: left;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0 6px;
+    border: 2px solid #333;
+    overflow: hidden;
+    cursor: pointer;
+}
+.content li img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    margin: auto;
+}
+.content li.on{
+    border:2px solid red;
+}
+@font-face{font-family: "iconfont";
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    position:absolute;
+    width:10px;
+    height:inherit;
+    font-size:16px;
+    color:#fea900;
+    font-weight:600;
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    cursor:pointer;
+    line-height:64px;
+}
+.content .prev{
+    transform:rotate(180deg);
+}
+.content .next{
+    right:0;
+}
